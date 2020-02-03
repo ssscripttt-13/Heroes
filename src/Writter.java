@@ -1,5 +1,5 @@
 public interface Writter extends Follower {
     void write();
-    void mama();
+    void mama12312312();
 
 }

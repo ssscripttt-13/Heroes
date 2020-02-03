@@ -1,4 +1,4 @@
-public class Wizard extends Unit implements Writter {
+public class Wizard extends Unit implements Writter, Guard {
 
     public Wizard(String name) {
         super(name);
@@ -7,12 +7,35 @@ public class Wizard extends Unit implements Writter {
     @Override
     public void write() {
         double r = Math.random();
-        String text = (Math.random() > 0.5) ? "Хм..., видимо важно, запишу." : "WTF!";
-        System.out.println(getName() + ": " + text);
+       if(r>0.5){
+           System.out.println("Опять писать");
+       }
+       else System.out.println("Нормально сказал,дядя");
     }
 
-    @Override
-    public void follow() {
-        //...
+    public void follow(Point p) {
+        super.moveTo(p);
+        System.out.println("АСТАНАВИСЬ");
+
+    }
+
+
+    public void attack() {
+        System.out.println("");
+
+    }
+    public void deffend(){
+        System.out.println("Галина стоп!");
+
+    }
+
+
+    public void drunk() {
+
+    }
+
+
+    public void kick() {
+
     }
 }

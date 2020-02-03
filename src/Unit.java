@@ -21,6 +21,10 @@ public class Unit {
         return name;
     }
 
+    public Point getPosition() {
+        return position;
+    }
+
     public void moveTo(Point p) {
         System.out.println(String.format("%s перемещается на %s", this.getName(), p));
     }
