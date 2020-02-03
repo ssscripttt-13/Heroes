@@ -1,4 +1,5 @@
-public interface Writter {
+public interface Writter extends Follower {
     void write();
-    void follow();
+    void mama();
+
 }
